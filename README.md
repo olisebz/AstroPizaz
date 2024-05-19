@@ -35,7 +35,7 @@ Führen Sie die folgenden Schritte aus, um das Projekt lokal zu installieren und
 
 3. **Entwicklungsserver starten**:
    ```bash
-   npm start
+   npm run dev
    ```
 
 Die Anwendung sollte nun unter `http://localhost:3000` verfügbar sein.
