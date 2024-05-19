@@ -43,6 +43,7 @@ Die Anwendung sollte nun unter `http://localhost:3000` verfügbar sein.
 ## Mitwirkende
 
 - **@ymeichtry**: [GitHub Profile](https://github.com/ymeichtry)
+- **@olisebz**: [GitHub Profile](https://github.com/olisebz)
 - **@domixsch**: [GitHub Profile](https://github.com/domixsch)
 
 ## Lizenz
