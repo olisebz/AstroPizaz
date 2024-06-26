@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/home/Home.js';
-import Admin from './pages/admin/Admin.js';
-import PayPage from './pages/pay/PayPage.js';
+import Home from './pages/homePage/Home.js';
+import Admin from './pages/adminPage/Admin.js';
+import PayPage from './pages/payPage/PayPage.js';
 import './App.css';
 
 import Navbar from './components/Navbar.js';
