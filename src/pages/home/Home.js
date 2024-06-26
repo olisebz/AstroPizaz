@@ -53,8 +53,8 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>Welcome to the Main Page</h1>
-      <p>This is a test main page for our application.</p>
+      <h1>Menue</h1>
+        <p>Choose your favorite pizza and add it to the cart</p>
       <div className="pizza-container">
         {pizzas.map((pizza) => (
           <div key={pizza.id} className="pizza-box">
