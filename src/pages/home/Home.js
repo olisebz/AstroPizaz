@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Home.css';
 import { FaTrash } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 // Importieren der Bilder
 import margheritaImage from '../../images/pizza_margherita.png';
 import pepperoniImage from '../../images/pizza_pepperoni.png';
@@ -20,6 +21,7 @@ const pizzas = [
 
 function Home() {
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
 
   const addToCart = (pizza) => {
     setCart((prevCart) => {
@@ -51,10 +53,14 @@ function Home() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
+  const handleBuy = () => {
+    navigate('/pay');
+  };
+
   return (
     <div className="home">
       <h1>Menue</h1>
-        <p>Choose your favorite pizza and add it to the cart</p>
+      <p>Choose your favorite pizza and add it to the cart</p>
       <div className="pizza-container">
         {pizzas.map((pizza) => (
           <div key={pizza.id} className="pizza-box">
@@ -77,7 +83,7 @@ function Home() {
           ))}
         </ul>
         <h3>Total: ${calculateTotal()}</h3>
-        <button className="buy-button">Buy</button>
+        <button className="buy-button" onClick={handleBuy}>Buy</button>
       </div>
     </div>
   );
