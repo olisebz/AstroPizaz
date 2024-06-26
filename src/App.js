@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin />} />
-            <Route path="/paypage" element={<PayPage />} />
+            <Route path="/pay" element={<PayPage />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
         </main>
