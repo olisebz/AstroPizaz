@@ -1,6 +1,6 @@
-// MainPage.js
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
+import { FaTrash } from 'react-icons/fa';
 // Importieren der Bilder
 import margheritaImage from '../../images/pizza_margherita.png';
 import pepperoniImage from '../../images/pizza_pepperoni.png';
@@ -19,6 +19,34 @@ const pizzas = [
 ];
 
 function Home() {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (pizza) => {
+    setCart((prevCart) => {
+      const existingPizza = prevCart.find(item => item.id === pizza.id);
+      if (existingPizza) {
+        return prevCart.map(item =>
+          item.id === pizza.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      } else {
+        return [...prevCart, { ...pizza, quantity: 1 }];
+      }
+    });
+  };
+
+  const removeFromCart = (pizzaId) => {
+    setCart((prevCart) => {
+      const existingPizza = prevCart.find(item => item.id === pizzaId);
+      if (existingPizza.quantity > 1) {
+        return prevCart.map(item =>
+          item.id === pizzaId ? { ...item, quantity: item.quantity - 1 } : item
+        );
+      } else {
+        return prevCart.filter(item => item.id !== pizzaId);
+      }
+    });
+  };
+
   return (
     <div className="home">
       <h1>Welcome to the Main Page</h1>
@@ -29,11 +57,22 @@ function Home() {
             <img src={pizza.image} alt={pizza.name} className="pizza-image"/>
             <h2>{pizza.name}</h2>
             <p>{pizza.description}</p>
-            <button>Add to Cart</button>
+            <button onClick={() => addToCart(pizza)}>Add to Cart</button>
           </div>
         ))}
       </div>
-      <button className="buy-button">Buy</button>
+      <div className="cart">
+        <h2>Shopping Cart</h2>
+        <ul>
+          {cart.map((item) => (
+            <li key={item.id}>
+              <span>{item.quantity} x {item.name}</span>
+              <FaTrash className="delete-icon" onClick={() => removeFromCart(item.id)} />
+            </li>
+          ))}
+        </ul>
+        <button className="buy-button">Buy</button>
+      </div>
     </div>
   );
 }
