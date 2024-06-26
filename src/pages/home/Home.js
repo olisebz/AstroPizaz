@@ -10,12 +10,12 @@ import meatLoversImage from '../../images/pizza_meatlovers.png';
 import buffaloChickenImage from '../../images/pizza_buffalochicken.png';
 
 const pizzas = [
-  { id: 1, name: 'Margherita', description: 'Tomato sauce, mozzarella, and oregano', image: margheritaImage },
-  { id: 2, name: 'Pepperoni', description: 'Tomato sauce, mozzarella, and pepperoni', image: pepperoniImage },
-  { id: 3, name: 'Hawaiian', description: 'Tomato sauce, cheese, ham, and pineapple', image: hawaiianImage },
-  { id: 4, name: 'Veggie', description: 'Tomato sauce, mozzarella, and assorted vegetables', image: veggieImage },
-  { id: 5, name: 'Meat Lovers', description: 'Tomato sauce, mozzarella, and assorted meats', image: meatLoversImage },
-  { id: 6, name: 'Buffalo Chicken', description: 'Buffalo sauce, chicken, and onions', image: buffaloChickenImage },
+  { id: 1, name: 'Margherita', description: 'Tomato sauce, mozzarella, and oregano', price: 8, image: margheritaImage },
+  { id: 2, name: 'Pepperoni', description: 'Tomato sauce, mozzarella, and pepperoni', price: 10, image: pepperoniImage },
+  { id: 3, name: 'Hawaiian', description: 'Tomato sauce, cheese, ham, and pineapple', price: 12, image: hawaiianImage },
+  { id: 4, name: 'Veggie', description: 'Tomato sauce, mozzarella, and assorted vegetables', price: 9, image: veggieImage },
+  { id: 5, name: 'Meat Lovers', description: 'Tomato sauce, mozzarella, and assorted meats', price: 11, image: meatLoversImage },
+  { id: 6, name: 'Buffalo Chicken', description: 'Buffalo sauce, chicken, and onions', price: 13, image: buffaloChickenImage },
 ];
 
 function Home() {
@@ -47,6 +47,10 @@ function Home() {
     });
   };
 
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
   return (
     <div className="home">
       <h1>Welcome to the Main Page</h1>
@@ -57,6 +61,7 @@ function Home() {
             <img src={pizza.image} alt={pizza.name} className="pizza-image"/>
             <h2>{pizza.name}</h2>
             <p>{pizza.description}</p>
+            <p>Price: ${pizza.price}</p>
             <button onClick={() => addToCart(pizza)}>Add to Cart</button>
           </div>
         ))}
@@ -66,11 +71,12 @@ function Home() {
         <ul>
           {cart.map((item) => (
             <li key={item.id}>
-              <span>{item.quantity} x {item.name}</span>
+              <span>{item.quantity} x {item.name} - ${item.price * item.quantity}</span>
               <FaTrash className="delete-icon" onClick={() => removeFromCart(item.id)} />
             </li>
           ))}
         </ul>
+        <h3>Total: ${calculateTotal()}</h3>
         <button className="buy-button">Buy</button>
       </div>
     </div>
