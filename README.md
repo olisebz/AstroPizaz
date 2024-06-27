@@ -1,55 +1,56 @@
-# AstroPizza Frontend
+# ZMS-Pizza Frontend
 
-Willkommen zum AstroPizza Frontend-Projekt! Dies ist das Frontend unserer innovativen Pizza-Bestellplattform, die als Schulprojekt entwickelt wurde. Wir haben eine benutzerfreundliche Anwendung erstellt, die es den Benutzern ermöglicht, schnell und einfach ihre Lieblingspizzas zu bestellen.
+Welcome to the ZMS-Pizza Frontend project! This is the frontend of our innovative pizza ordering platform developed as a school project. We have created a user-friendly application that allows users to quickly and easily order their favorite pizzas.
 
-## Technologien
+## Technologies
 
-Dieses Projekt wurde unter Verwendung der folgenden Technologien entwickelt:
+This project was developed using the following technologies:
 
-- **HTML**: Strukturierung der Webseiten.
-- **SCSS**: Erweiterte CSS-Features für die Gestaltung.
-- **JavaScript**: Funktionale Programmierung und interaktive Features.
-- **React.js**: JavaScript-Framework für den Aufbau der Benutzeroberfläche.
+- **HTML**: Structuring the web pages.
+- **SCSS**: Advanced CSS features for styling.
+- **JavaScript**: Functional programming and interactive features.
+- **React.js**: JavaScript framework for building the user interface.
 
-## Zusatztechnologien
+## Additional Technologies
 
-Zusätzlich zu den Haupttechnologien haben wir die folgenden Bibliotheken verwendet:
+In addition to the main technologies, we have used the following libraries:
 
-- **Bootstrap**: Für vorgefertigte UI-Komponenten und responsive Design.
-- **Tailwind CSS**: Für ein Utility-First CSS-Framework und flexible Anpassungen.
+- **Bootstrap**: For pre-built UI components and responsive design.
+- **Tailwind CSS**: For a utility-first CSS framework and flexible customization.
 
-## Projekt starten
+## Getting Started
 
-Führen Sie die folgenden Schritte aus, um das Projekt lokal zu installieren und zu starten:
+Follow these steps to install and start the project locally:
 
-1. **Repository klonen**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/username/AstroPizza-Frontend.git
    cd AstroPizza-Frontend
-   ```
 
-2. **Abhängigkeiten installieren**:
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-3. **Entwicklungsserver starten**:
+3. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-Die Anwendung sollte nun unter `http://localhost:3000` verfügbar sein.
+The application should now be available at `http://localhost:3000`.
 
-## Mitwirkende
+## Contributors
 
 - **@ymeichtry**: [GitHub Profile](https://github.com/ymeichtry)
 - **@olisebz**: [GitHub Profile](https://github.com/olisebz)
 - **@domixsch**: [GitHub Profile](https://github.com/domixsch)
 
-## Lizenz
+## License
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert. Weitere Details finden Sie in der [LICENSE](LICENSE)-Datei.
+This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE)-File.
 
 ---
 
-Vielen Dank, dass Sie unser Schulprojekt AstroPizza verwenden! Wir hoffen, dass Ihnen unser Service gefällt.
+Thank you for using our ZMS-Pizza school project! We hope you enjoy our service.
+
+This README.md file provides a comprehensive overview of the AstroPizza Frontend project, including its purpose, technologies used, how to set up and run the project locally, contributors, and licensing information.
