@@ -47,14 +47,16 @@ function Admin() {
     loadCustomers();
   };
 
-  const editCustomer = (index) => {
-    setEditingIndex(index);
-    setFormState(customers[index]);
+  const editCustomer = (id) => {
+    const index = customers.findIndex(customer => customer.id === id);
+    if (index !== -1) {
+      setEditingIndex(index);
+      setFormState(customers[index]);
+    }
   };
 
-  const deleteCustomerById = async (index) => {
-    const customerToDelete = customers[index];
-    await deleteCustomer(customerToDelete.id);
+  const deleteCustomerById = async (id) => {
+    await deleteCustomer(id);
     loadCustomers();
   };
 
