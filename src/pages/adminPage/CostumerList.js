@@ -1,4 +1,3 @@
-// src/pages/admin/CustomerList.js
 import React from 'react';
 
 function CustomerList({ customers, editCustomer, deleteCustomer }) {
@@ -6,7 +5,7 @@ function CustomerList({ customers, editCustomer, deleteCustomer }) {
     <div className="customer-list">
       <h2>Customer List</h2>
       {customers.map((customer, index) => (
-        <div key={index} className="customer">
+        <div key={customer.id} className="customer">
           <div>
             <div>{customer.firstName} {customer.lastName}</div>
             <div>{customer.street}</div>
