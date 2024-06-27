@@ -4,7 +4,7 @@ import React from 'react';
 function CustomerList({ customers, editCustomer, deleteCustomer }) {
   return (
     <div className="customer-list">
-      <h2>Kunden Liste</h2>
+      <h2>Customer List</h2>
       {customers.map((customer, index) => (
         <div key={index} className="customer">
           <div>
@@ -13,8 +13,8 @@ function CustomerList({ customers, editCustomer, deleteCustomer }) {
             <div>{customer.phoneNumber}</div>
           </div>
           <div className="customer-buttons">
-            <button className="edit-button" onClick={() => editCustomer(index)}>Bearbeiten</button>
-            <button className="delete-button" onClick={() => deleteCustomer(index)}>Löschen</button>
+            <button className="edit-button" onClick={() => editCustomer(index)}>Edit</button>
+            <button className="delete-button" onClick={() => deleteCustomer(index)}>Delete</button>
           </div>
         </div>
       ))}

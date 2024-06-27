@@ -4,9 +4,9 @@ import React from 'react';
 function CustomerForm({ formState, handleInputChange, handleFormSubmit, isEditing }) {
   return (
     <form onSubmit={handleFormSubmit}>
-      <h2>{isEditing ? 'Kunden Bearbeiten' : 'Kunden Erstellen'}</h2>
+      <h2>{isEditing ? 'Edit Customer' : 'Create Customer'}</h2>
       <div>
-        <label>Vorname:</label>
+        <label>First Name:</label>
         <input
           type="text"
           name="firstName"
@@ -15,7 +15,7 @@ function CustomerForm({ formState, handleInputChange, handleFormSubmit, isEditin
         />
       </div>
       <div>
-        <label>Nachname:</label>
+        <label>Last Name:</label>
         <input
           type="text"
           name="lastName"
@@ -24,7 +24,7 @@ function CustomerForm({ formState, handleInputChange, handleFormSubmit, isEditin
         />
       </div>
       <div>
-        <label>Strasse:</label>
+        <label>Street:</label>
         <input
           type="text"
           name="street"
@@ -33,7 +33,7 @@ function CustomerForm({ formState, handleInputChange, handleFormSubmit, isEditin
         />
       </div>
       <div>
-        <label>Telefon Nummer:</label>
+        <label>Phone Number:</label>
         <input
           type="text"
           name="phoneNumber"
@@ -41,7 +41,7 @@ function CustomerForm({ formState, handleInputChange, handleFormSubmit, isEditin
           onChange={handleInputChange}
         />
       </div>
-      <button type="submit">{isEditing ? 'Aktualisieren' : 'Erstellen'}</button>
+      <button type="submit">{isEditing ? 'Update' : 'Create'}</button>
     </form>
   );
 }
