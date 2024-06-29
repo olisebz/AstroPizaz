@@ -1,0 +1,32 @@
+# Maven build directory
+/target/
+
+# IntelliJ IDEA
+.idea/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Gradle
+.gradle/
+build/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Application properties
+/src/main/resources/application.properties
+
+# Compiled Java classes
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
